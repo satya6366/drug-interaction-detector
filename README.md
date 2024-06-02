@@ -11,4 +11,25 @@ Dependencies listed in requirements.txt
 
 installation:
 
-step 1: 
+step 1: git clone https://github.com/satya6366/drug-interaction-detector.git in to new folder
+step 2: create a vitutal environment as commands "python -m venv venv" then ".\venv\scripts\activate"
+step 3: install dependences
+arrage folder according to the format 
+
+project_file
+|
+|--app.py
+|
+|--templates
+       |
+       |--index.html
+       |--result.html
+|
+|--static
+        |
+        |-img
+             |-heart.png
+             |-capsule.png
+        
+step 4: run "python app.py"
+
