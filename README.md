@@ -30,6 +30,9 @@ project_file
         |-img
              |-heart.png
              |-capsule.png
+
+  ![image](https://github.com/satya6366/drug-interaction-detector/assets/170462915/0d3ab1ee-f66d-4eaf-aee3-a2a9bc4e14c9)
+           
         
 step 4: run "python app.py"
 
