@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Interactions Detector</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #d3e9ed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .front-child {
+        width: 1490px;
+        height: 55px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        left: calc(50% - 745px);
+        background-color: #de4fe1;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+        position: relative;
+    }
+    .medical-design-poster-with-ori-icon {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        margin: 0 !important;
+        top: -120px;
+        left: -147px;
+        object-fit: cover;
+        z-index: 2;
+    }
+    header {
+        background-color: #4c2c92;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        color: white;
+    }
+    h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .form-group {
+        margin: 15px 0;
+    }
+    label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: calc(100% - 120px);
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .medical-design-poster-with-ori-icon1 {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        margin: 0 !important;
+        right: -157px;
+        bottom: -111px;
+        object-fit: cover;
+        z-index: 1;
+    }
+   </style>
+</head>
+<body>
+    <div class="front">
+        <div class="front-child"></div>
+        <img
+          class="medical-design-poster-with-ori-icon"
+          alt=""
+          src="{{url_for('static', filename='img/capsule.png')}}"
+        />
+        <br><br><br> <br><br><br> 
+        <div class="container">
+            <header>
+                <h1>Drug Interactions Detector</h1>
+            </header>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="drug">Enter drug name:</label>
+                    <input type="text" id="drug" name="drug" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="virus">Drug B:</label>
+                    <input type="text" id="virus" name="virus" required>
+                </div>
+                <div class="form-group">
+                    <label for="condition">Condition:</label>
+                    <input type="text" id="condition" name="condition" required>
+                </div>
+                <button type="submit">Analyze</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        <img
+            class="medical-design-poster-with-ori-icon1"
+            loading="lazy"
+            alt=""
+            src="{{url_for('static', filename='img/heart.png')}}">
+    </div>
+</body>
+</html>

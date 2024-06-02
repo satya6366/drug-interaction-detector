@@ -1,0 +1,126 @@
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Interactions Result</title>
+
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #d3e9ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+header {
+  background-color: #4c2c92;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.form-group {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Drug Interactions Result</h1>
+        </header>
+        <form id="drugForm">
+            <div class="form-group">
+
+                <h3>Drug A :  </h3> <h3> {{ drug }} </h3>
+
+
+            </div>
+            <div class="form-group">
+
+                <h3> Drug B : </h3>   <h3> {{ virus }}  </h3> 
+
+            </div>
+            <div class="form-group">
+
+                <h3> Condition : </h3> <h3> {{ condition }} </h3> 
+
+            </div>
+            <div class="form-group">
+
+                <h3>  Interactions :  </h3>  <h3>  {{ interaction }} </h3>
+
+            </div>
+            <button type="button" onclick="index.html">Check another Interaction</button>
+        </form>
+    </div>
+    <script>
+        function checkAnotherInteraction() {
+            // Implement the logic for checking another interaction
+            document.getElementById('drugA').value = '';
+            document.getElementById('drugB').value = '';
+            document.getElementById('condition').value = '';
+            document.getElementById('interaction').value = '';
+        }
+    </script>
+</body>
+</html>
